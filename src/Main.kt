@@ -1,30 +1,24 @@
 import kotlin.collections.List as List1
-fun main (){
-    val a = ArrayList<ArrayList<String>>()
-    val aa = arrayListOf("","")
-    var ab = arrayListOf("","")
-    var num=1
-    while (num<3) {
+fun main () {
+    val Countries = arrayListOf(arrayListOf<String>())
+    for (i in 0..2) {
+        var country = ""
+        var capital = ""
+
         println("Enter country :")
-        var country = readLine()!!.toString()
+        country = readLine()!!
 
         println("Enter capital :")
-        var capital = readLine()!!.toString()
-        num++
-
-        aa.add(country)
-        aa.add(capital)
-        ab.add(country)
-        ab.add(capital)
-
-        println(a.add(ArrayList(aa)))
-        println(a.add(ArrayList(ab)))
-
+        capital = readLine()!!
+        Countries.add(arrayListOf(country, capital))
     }
-  for (i in a){
-      println(i)
-  }
+    for (i in Countries) {
+        if (i.isNotEmpty()) {
+            println("the capital of ${i[0]} is ${i[1]}")
+        }
+    }
 }
+
 
 
 
